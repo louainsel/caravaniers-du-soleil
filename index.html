@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Les Caravaniers du Soleil — Maquette</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="#accueil"><span>☀</span> Caravaniers du Soleil</a>
+    <button class="menu-button" aria-label="Ouvrir le menu">Menu</button>
+    <nav class="nav-links">
+      <a href="#caravane">La Caravane</a>
+      <a href="#routes">Routes & Comptoirs</a>
+      <a href="#marchandises">Marchandises</a>
+      <a href="#visages">Visages</a>
+      <a href="imesh.html">Les Imesh</a>
+      <a href="#hrp">HRP</a>
+      <a class="gallery-link" href="galerie.html">Galerie ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="accueil">
+    <div class="container hero-content">
+      <div class="hero-mark">Paglth'an · Thanalan · Thavnair · Tural</div>
+      <h1>Les Caravaniers<br>du Soleil</h1>
+      <p>Une compagnie marchande itinérante née sur les routes du Paglth'an, reliant communautés, comptoirs et horizons lointains au gré des cargaisons et des rencontres.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#routes">Suivre les routes</a>
+        <a class="btn btn-secondary" href="#caravane">Découvrir la caravane</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="sunband">
+    <div class="container">
+      <div><strong>Voyager</strong><span>Des cycles terrestres et maritimes</span></div>
+      <div><strong>Échanger</strong><span>Des cargaisons qui changent au fil des routes</span></div>
+      <div><strong>Relier</strong><span>Des communautés, des artisans et des comptoirs</span></div>
+    </div>
+  </div>
+
+  <section id="caravane">
+    <div class="container split">
+      <div class="prose">
+        <div class="kicker">La Caravane</div>
+        <h2 class="section-title">Une compagnie qui vit au rythme de la route</h2>
+        <p>Les Caravaniers du Soleil ne forment pas une troupe figée. Autour d'un noyau stable, la compagnie embauche selon ses besoins : escortes, négociants, conducteurs, manutentionnaires ou marins peuvent rejoindre un trajet ou un cycle complet.</p>
+        <p>Les chariots servent autant au transport qu'au commerce itinérant. Ils quittent la baie de Dha'Yuz, desservent les villages et villes du Thanalan, passent par Ul'dah, puis reprennent la route en redistribuant au retour les marchandises acquises en chemin.</p>
+        <div class="cards">
+          <article class="card"><div class="icon">🐃</div><h3>Convoi terrestre</h3><p>Chariots, bêtes de trait, escortes et campements adaptés aux routes du Thanalan.</p></article>
+          <article class="card"><div class="icon">⚓</div><h3>Relais maritimes</h3><p>Des traversées sont assurées avec des équipages locaux et des partenaires commerciaux.</p></article>
+          <article class="card"><div class="icon">🤝</div><h3>Personnel engagé</h3><p>Certains travaillent durablement avec la compagnie, d'autres seulement le temps d'un voyage.</p></article>
+        </div>
+      </div>
+      <figure class="photo-block square">
+        <button class="zoomable-image" type="button" aria-label="Agrandir l’image du convoi des Caravaniers du Soleil">
+          <img src="assets/caravane-large.png" alt="Convoi des Caravaniers du Soleil dans le Thanalan" />
+          <span class="zoom-hint" aria-hidden="true">↗ Agrandir</span>
+        </button>
+        <figcaption class="caption-below">Le convoi des Caravaniers du Soleil sur les routes du Thanalan.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="routes" class="alt">
+    <div class="container">
+      <div class="kicker">Routes & Comptoirs</div>
+      <h2 class="section-title">Un réseau plus large que la caravane</h2>
+      <p class="section-intro">Dha'Yuz reste le point d'ancrage historique, mais les marchandises circulent désormais par plusieurs routes. Soleil-de-Nuit n'accompagne pas nécessairement chaque cargaison : son réseau permet aux biens de voyager jusqu'aux relais où les Caravaniers les récupèrent.</p>
+
+      <div class="route-wrap route-map-wrap">
+        <div class="trade-map" aria-label="Réseau des routes commerciales des Caravaniers du Soleil">
+          <div class="trade-map-heading">
+            <div>
+              <span class="trade-map-kicker">Réseau commercial</span>
+              <h3>Des routes qui se croisent</h3>
+            </div>
+            <div class="trade-map-legend" aria-label="Légende">
+              <span><i class="legend-line land"></i> route terrestre</span>
+              <span><i class="legend-line return"></i> trajet retour</span>
+              <span><i class="legend-line sea"></i> liaison maritime</span>
+            </div>
+          </div>
+
+          <div class="trade-map-canvas">
+            <svg class="trade-map-lines" viewBox="0 0 1200 610" preserveAspectRatio="none" aria-hidden="true">
+              <defs>
+                <marker id="arrow-land" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+                  <path d="M0,0 L10,5 L0,10 z" class="marker-land" />
+                </marker>
+                <marker id="arrow-sea" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+                  <path d="M0,0 L10,5 L0,10 z" class="marker-sea" />
+                </marker>
+              </defs>
+
+              <!-- Thavnair ⇄ Dha'Yuz -->
+              <path class="map-line sea" d="M190 170 C245 170, 275 170, 330 170" marker-end="url(#arrow-sea)" />
+              <path class="map-line sea" d="M330 190 C275 190, 245 190, 190 190" marker-end="url(#arrow-sea)" />
+
+              <!-- Dha'Yuz → Thanalan → Vesper → Ul'dah -->
+              <path class="map-line land" d="M430 180 C480 180, 510 180, 560 180" marker-end="url(#arrow-land)" />
+              <path class="map-line land" d="M745 180 C790 180, 825 180, 870 180" marker-end="url(#arrow-land)" />
+              <path class="map-line land" d="M960 210 C1010 230, 1050 245, 1080 285" marker-end="url(#arrow-land)" />
+
+              <!-- Retour Ul'dah → Thanalan → Dha'Yuz -->
+              <path class="map-line return" d="M1080 340 C980 420, 820 430, 690 360 C610 315, 535 305, 410 320" marker-end="url(#arrow-land)" />
+
+              <!-- Baie des Vêpres ⇄ Limsa ⇄ Tural -->
+              <path class="map-line sea" d="M900 250 C900 330, 850 395, 760 455" marker-end="url(#arrow-sea)" />
+              <path class="map-line sea" d="M745 485 C680 510, 610 510, 545 495" marker-end="url(#arrow-sea)" />
+              <path class="map-line sea" d="M545 515 C610 540, 680 540, 745 515" marker-end="url(#arrow-sea)" />
+              <path class="map-line sea" d="M775 455 C855 400, 915 335, 925 255" marker-end="url(#arrow-sea)" />
+            </svg>
+
+            <div class="route-label label-thav">≈ 1 mois en mer</div>
+            <div class="route-label label-outbound">cycle terrestre</div>
+            <div class="route-label label-return">retour par les villages du Thanalan</div>
+            <div class="route-label label-sea">Limsa ⇄ Tural · ≈ 2 mois en mer</div>
+
+            <article class="map-node node-thavnair">
+              <img src="https://i.imgur.com/QucBGsy.png" alt="Paysage de Thavnair" loading="lazy" />
+              <div><strong>Thavnair</strong><small>Réseau historique</small></div>
+            </article>
+
+            <article class="map-node node-dhayuz anchor">
+              <img src="assets/route-dhayuz.jpg" alt="Baie de Dha'Yuz" loading="lazy" />
+              <div><strong>Baie de Dha'Yuz</strong><small>Point d’ancrage · relais maritime</small></div>
+            </article>
+
+            <article class="map-region node-thanalan">
+              <span class="region-eyebrow">Zone parcourue</span>
+              <strong>Thanalan</strong>
+              <p>Villages, oasis, marchés et comptoirs jalonnent le cycle terrestre.</p>
+              <span class="region-note">La caravane y circule, plutôt que de suivre une seule étape fixe.</span>
+            </article>
+
+            <article class="map-node node-vesper">
+              <img src="assets/route-vesper-bay.jpg" alt="Baie des Vêpres" loading="lazy" />
+              <div><strong>Baie des Vêpres</strong><small>Relais maritime · escales variables</small></div>
+            </article>
+
+            <article class="map-node node-uldah hub">
+              <img src="assets/route-uldah.png" alt="Vue d'Ul'dah" loading="lazy" />
+              <div><strong>Ul'dah</strong><small>Nœud commercial · escale importante</small></div>
+            </article>
+
+            <article class="map-node node-limsa compact">
+              <img src="https://i.pinimg.com/736x/f0/55/7c/f0557c2589fda384bd1cb36d628edf6f.jpg" alt="Vue de Limsa Lominsa" loading="lazy" />
+              <div><strong>Limsa Lominsa</strong><small>Escale maritime</small></div>
+            </article>
+
+            <article class="map-node node-tural compact">
+              <img src="assets/route-tural.png" alt="Paysage du Tural" loading="lazy" />
+              <div><strong>Tural</strong><small>Branche commerciale</small></div>
+            </article>
+          </div>
+
+          <div class="trade-map-summary">
+            <div class="route-summary-card">
+              <strong>Réseau terrestre</strong>
+              <p>Baie de Dha'Yuz → villages et comptoirs du Thanalan → Baie des Vêpres → Ul'dah → Thanalan → Baie de Dha'Yuz.</p>
+              <p><b>Ul'dah constitue une escale importante :</b> les accords entretenus avec la Guilde des Orfèvres et la compagnie minière Amajina &amp; Fils y donnent lieu à des trocs et des échanges qui peuvent prolonger le séjour de la caravane avant son retour sur les routes du Thanalan.</p>
+            </div>
+            <div class="route-summary-card">
+              <strong>Réseaux maritimes</strong>
+              <p><b>Thavnair ⇄ Baie de Dha'Yuz :</b> environ <b>1 mois de traversée en mer</b>.</p>
+              <p><b>Baie des Vêpres ⇄ Limsa Lominsa ⇄ Tural :</b> la traversée entre <b>Limsa Lominsa et le Tural dure environ 2 mois en mer</b>.</p>
+              <p class="route-duration-note">Ces durées correspondent uniquement au temps passé en mer et n'incluent ni les escales, ni les attentes, ni les chargements, ni les trajets terrestres.</p>
+            </div>
+          </div>
+
+          <aside class="trade-flow-note">
+            <strong>Des routes au rythme des échanges</strong>
+            <p>Les marchandises des Caravaniers ne circulent pas selon un flux continu. Les longues traversées maritimes imposent un fonctionnement par arrivages et influencent directement l'organisation des convois. Dha'Yuz et la Baie des Vêpres servent ainsi de véritables points de relais : les escales peuvent s'y prolonger dans l'attente d'un navire ou d'une cargaison, le temps de décharger, trier et redistribuer les marchandises, ou encore de préparer la suite du voyage.</p>
+          </aside>
+        </div>
+      </div>
+
+      <div class="split" style="margin-top:48px">
+        <figure class="photo-block wide">
+          <button class="zoomable-image" type="button" aria-label="Agrandir l’image des chariots des Caravaniers du Soleil">
+            <img src="assets/caravane-detail.png" alt="Chariots des Caravaniers du Soleil" />
+            <span class="zoom-hint" aria-hidden="true">↗ Agrandir</span>
+          </button>
+          <figcaption class="caption-below">Les chariots sont l'identité la plus immédiatement reconnaissable de la compagnie.</figcaption>
+        </figure>
+        <div class="prose">
+          <div class="kicker">Relais & partenaires</div>
+          <h3 class="section-title" style="font-size:2.4rem">Un réseau construit au fil des routes</h3>
+          <p>Les Caravaniers ne s'appuient pas uniquement sur leurs chariots : leur activité repose sur des <strong>points de relais</strong>, des escales régulières et des partenaires auprès desquels les marchandises peuvent être échangées, stockées ou réorientées.</p>
+          <p><strong>La Baie de Dha'Yuz</strong> demeure leur principal point d'ancrage et le relais entre le Paglth'an, le Thanalan et la liaison maritime avec <strong>Thavnair</strong>, berceau commercial de Soleil-de-Nuit.</p>
+          <p><strong>La Baie des Vêpres</strong> joue quant à elle le rôle de charnière entre le circuit terrestre et la route maritime vers Limsa Lominsa puis le Tural. Les longues traversées peuvent y imposer des escales plus ou moins prolongées, le temps d'attendre un navire, une cargaison ou de préparer la suite du trajet.</p>
+          <p><strong>Ul'dah</strong> constitue un nœud commercial majeur où la caravane peut également séjourner quelque temps. Les accords entretenus avec <strong>la Guilde des Orfèvres</strong> et <strong>Amajina & Fils</strong> donnent lieu à des trocs et échanges avant le retour vers les routes du Thanalan.</p>
+          <p>Au <strong>Tural</strong>, près d'une année passée comme Main-Feu auprès des Mobelins a enfin permis à Soleil-de-Nuit d'ouvrir de nouveaux échanges, dont un accord avec le <strong>Bazar aux Mille Perles</strong>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="marchandises">
+    <div class="container">
+      <div class="kicker">Marchandises</div>
+      <h2 class="section-title">Ce qui voyage change avec les routes</h2>
+      <p class="section-intro">Les Caravaniers n'ont pas de catalogue immuable. Leur offre dépend des arrivages, des partenariats, des opportunités et des besoins rencontrés en chemin.</p>
+      <div class="goods">
+        <article class="good"><h3>Imesh & Paglth'an</h3><p>Lapidairerie, orfèvrerie, artisanat, ressources et productions issues du réseau local de Dha'Yuz.</p></article>
+        <article class="good"><h3>Thavnair</h3><p>Textiles, épices, artisanat et marchandises accessibles grâce aux relations construites durant l'apprentissage de Soleil-de-Nuit.</p></article>
+        <article class="good"><h3>Ul'dah & Thanalan</h3><p>Minerais, métaux, pierres, ouvrages et biens acquis auprès de partenaires ou au fil des étapes.</p></article>
+        <article class="good"><h3>Tural</h3><p>Produits issus des nouveaux échanges développés au Tural, puis acheminés jusqu'aux relais éorzéens.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="visages" class="alt">
+    <div class="container">
+      <div class="kicker">Visages</div>
+      <h2 class="section-title">Ceux qui font vivre les Caravaniers</h2>
+      <p class="section-intro">Quelques figures assurent la continuité de la compagnie, tandis que d'autres rejoignent ses routes pour un cycle, une traversée ou une mission particulière.</p>
+      <div class="faces">
+        <button class="face face-soleil" type="button" data-face-title="Soleil-de-Nuit" data-face-role="Fondatrice · Marchande · Lapidaire" data-face-description="Fondatrice des Caravaniers du Soleil, Soleil-de-Nuit entretient les principaux réseaux commerciaux de la compagnie et négocie ses accords. Formée au commerce auprès d’un marchand thavnairois, elle a progressivement développé des liens à Thavnair, Ul'dah puis au Tural.||Si elle demeure le principal visage des Caravaniers, le fonctionnement de la compagnie lui permet aujourd’hui de ne pas accompagner personnellement chaque cargaison."><img src="assets/portrait-soleil.png" alt="Portrait de Soleil-de-Nuit" /><div class="face-info"><h3>Soleil-de-Nuit</h3><span>Fondatrice · Marchande · Lapidaire</span><small>Cliquer pour en savoir plus</small></div></button>
+        <button class="face face-eau-trouble" type="button" data-face-title="Eau-Trouble" data-face-role="Gérante" data-face-description="Proche de Soleil-de-Nuit et membre des Imesh, Eau-Trouble l’épaule dans la gestion des Caravaniers du Soleil. Elle assure notamment la continuité des activités lorsque la fondatrice voyage, négocie ailleurs ou demeure longtemps éloignée de la compagnie.||Son expérience de sourcière constitue également un savoir précieux pour une caravane amenée à traverser régulièrement des régions arides."><img src="assets/portrait-eau-trouble.png" alt="Portrait d’Eau-Trouble" /><div class="face-info"><h3>Eau-Trouble</h3><span>Gérante</span><small>Cliquer pour en savoir plus</small></div></button>
+        <button class="face face-brise-os" type="button" data-face-title="Brise-Os" data-face-role="Escorte · Protection des convois" data-face-description="Guerrier imesh expérimenté et cousin de Soleil-de-Nuit, Brise-Os assure ponctuellement la protection des convois terrestres. Combattant spécialisé dans le pugilat, il veille aussi bien sur les voyageurs que sur les marchandises lorsque sa présence est requise.||Une fonction qui lui permet désormais de mettre son expérience au service des Caravaniers et de ceux auxquels il est attaché."><img src="assets/portrait-brise-os.png" alt="Portrait de Brise-Os" /><div class="face-info"><h3>Brise-Os</h3><span>Escorte · Protection des convois</span><small>Cliquer pour en savoir plus</small></div></button>
+      </div>
+      <div class="cards" style="margin-top:24px">
+        <article class="card"><h3>Les compagnons d'un cycle</h3><p>Marins, gardes, conducteurs, manutentionnaires et marchands peuvent être engagés ponctuellement selon le trajet et la cargaison.</p></article>
+        <article class="card"><h3>Les rencontres</h3><p>La caravane est aussi un lieu de passage : voyageurs, artisans et clients peuvent croiser sa route et y nouer de nouveaux liens.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="imesh" class="imesh-band imesh-teaser">
+    <div class="container split" style="position:relative;z-index:1">
+      <div>
+        <div class="kicker" style="color:#ffd877">Les Imesh</div>
+        <h2 class="section-title">Ceux qui marchent ensemble</h2>
+        <p class="section-intro">Les Imesh sont une petite tribu nomade du Paglth'an, parmi de nombreuses autres communautés de la région. Soleil-de-Nuit, Eau-Trouble et Brise-Os en sont issus.</p>
+        <p class="imesh-quote">« Ceux qui marchent ensemble »</p>
+        <p>Leur culture repose sur la famille élargie, la transmission orale, le mouvement et une relation intime aux esprits et aux ancêtres. Leur histoire, elle, remonte au-delà de ce que la tribu est encore capable de dater avec certitude.</p>
+        <div class="hero-actions" style="margin-top:24px">
+          <a class="btn btn-primary" href="imesh.html">Découvrir les Imesh →</a>
+        </div>
+      </div>
+      <figure class="photo-block wide imesh-preview">
+        <button class="zoomable-image" type="button" aria-label="Agrandir l’image de Soleil-de-Nuit">
+          <img src="assets/soleil-duo.png" alt="Soleil-de-Nuit en conversation" />
+          <span class="zoom-hint" aria-hidden="true">↗ Agrandir</span>
+        </button>
+        <figcaption class="caption-below imesh-caption">Partir, apprendre et revenir fait pleinement partie de l'histoire des Imesh.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="hrp">
+    <div class="container">
+      <div class="kicker">Hors-Rôleplay</div>
+      <h2 class="section-title">Jouer avec les Caravaniers</h2>
+      <div class="hrp-box">
+        <div>
+          <p>Cette section pourra accueillir les informations pratiques : possibilités de rencontre, emplois temporaires, organisation de scènes, distinction entre informations publiques RP et éléments uniquement destinés aux joueurs, ainsi que les crédits.</p>
+          <p style="margin-bottom:0;color:#74594a">La galerie d'images est volontairement séparée afin de garder cette page principale légère.</p>
+        </div>
+        <a class="btn btn-primary" href="galerie.html">Ouvrir la galerie →</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="lightbox site-lightbox" aria-hidden="true">
+  <button class="lightbox-close" type="button" aria-label="Fermer">×</button>
+  <div class="lightbox-inner">
+    <img src="" alt="" />
+    <div class="lightbox-caption"></div>
+  </div>
+</div>
+
+<div class="portrait-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="portrait-modal-title">
+  <div class="portrait-modal-card">
+    <button class="portrait-modal-close" type="button" aria-label="Fermer">×</button>
+    <div class="kicker">Visage des Caravaniers</div>
+    <h2 id="portrait-modal-title"></h2>
+    <div class="portrait-modal-role"></div>
+    <p class="portrait-modal-description"></p>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container"><span>Les Caravaniers du Soleil — maquette de travail</span><a href="galerie.html">Galerie</a></div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
