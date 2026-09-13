@@ -110,9 +110,9 @@ section{padding:90px 0}
 /* gallery */
 .gallery-hero{padding:88px 0 48px;background:linear-gradient(120deg,#3b2115,#7a3a29);color:#fff}
 .gallery-hero p{color:#f3dfcd;max-width:700px}
-.gallery-grid{columns:3 320px;column-gap:18px;padding:50px 0 90px}
-.gallery-item{break-inside:avoid;margin:0 0 18px;background:#fff;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 8px 24px rgba(55,30,18,.08);cursor:zoom-in}
-.gallery-item img{width:100%;height:auto}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;padding:50px 0 90px}
+.gallery-item{margin:0;background:#fff;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 8px 24px rgba(55,30,18,.08);cursor:zoom-in}
+.gallery-item img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
 .gallery-item figcaption{padding:13px 15px;color:#5d4538;font-size:.9rem}
 .gallery-item figcaption strong{display:block;color:#2d1b11;font-family:Georgia,serif;font-size:1rem}
 .lightbox{position:fixed;inset:0;background:rgba(10,6,4,.92);display:none;align-items:center;justify-content:center;z-index:100;padding:30px}
@@ -864,8 +864,7 @@ section{padding:90px 0}
   .mode-vie-exchange{grid-template-columns:1fr;gap:10px;padding:25px 24px}
 }
 
-/* Tente imesh — planche d’inspiration */
-.imesh-tent-visual{max-width:680px;margin:24px auto 26px}
-.imesh-tent-visual .zoomable-image{aspect-ratio:auto;background:#efe5d7}
-.imesh-tent-visual .zoomable-image img{height:auto;object-fit:contain}
-.imesh-tent-visual .caption-below{text-align:center}
+
+/* Galerie : vignettes uniformes */
+@media(max-width:900px){.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.gallery-grid{grid-template-columns:1fr}}
