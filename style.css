@@ -833,3 +833,39 @@ section{padding:90px 0}
     margin-bottom:0;
   }
 }
+
+
+/* Mode de vie Imesh */
+.mode-vie-intro{max-width:none;margin-bottom:26px}
+.mode-vie-intro p{color:#584235;margin:.75rem 0}
+.mode-vie-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:24px 0 28px}
+.mode-vie-facts div{padding:15px 18px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.mode-vie-facts span{display:block;font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;font-weight:800;color:var(--terracotta);margin-bottom:3px}
+.mode-vie-facts strong{font-family:Georgia,serif;font-size:1.04rem}
+.mode-vie-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(280px,.65fr);gap:22px;align-items:stretch}
+.mode-vie-card{background:rgba(255,248,237,.72);border:1px solid var(--line);border-radius:18px;padding:25px 27px}
+.mode-vie-card h3,.mode-vie-exchange h3{font-family:Georgia,serif;font-size:1.45rem;line-height:1.25;margin:.25rem 0 .8rem}
+.mode-vie-card p,.mode-vie-exchange p{color:#584235;margin:.72rem 0;line-height:1.72}
+.mode-vie-side{display:grid;grid-template-rows:auto 1fr;gap:22px}
+.camp-special-places{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:22px;padding-top:20px;border-top:1px solid var(--line)}
+.camp-special-places div{display:grid;gap:4px}
+.camp-special-places strong{font-family:Georgia,serif;color:#3b2115}
+.camp-special-places span{font-size:.9rem;line-height:1.55;color:#695044}
+.mode-vie-exchange{display:grid;grid-template-columns:minmax(220px,.36fr) minmax(0,.64fr);gap:42px;margin-top:22px;padding:30px 32px;border-radius:20px;background:#2b1a12;color:#fff0d9}
+.mode-vie-exchange .kicker{color:#f0bd47}
+.mode-vie-exchange h3{color:#ffe09a;margin-top:.35rem}
+.mode-vie-exchange p{color:#ead9c6}
+.mode-vie-exchange strong{color:#ffe09a}
+@media(max-width:800px){
+  .mode-vie-facts{grid-template-columns:1fr}
+  .mode-vie-grid{grid-template-columns:1fr}
+  .mode-vie-side{grid-template-rows:auto}
+  .camp-special-places{grid-template-columns:1fr}
+  .mode-vie-exchange{grid-template-columns:1fr;gap:10px;padding:25px 24px}
+}
+
+/* Tente imesh — planche d’inspiration */
+.imesh-tent-visual{max-width:680px;margin:24px auto 26px}
+.imesh-tent-visual .zoomable-image{aspect-ratio:auto;background:#efe5d7}
+.imesh-tent-visual .zoomable-image img{height:auto;object-fit:contain}
+.imesh-tent-visual .caption-below{text-align:center}
